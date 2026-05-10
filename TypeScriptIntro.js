@@ -1,10 +1,8 @@
 "use strict";
-// ============================================
 // 1. DEFINE THE TYPES
-// ============================================
-// ============================================
+// ====================
 // 2. SAMPLE DATA
-// ============================================
+// ===============
 // An array of Person — can contain both Users and Admins
 const persons = [
     { type: 'user', name: 'Alice', age: 25 },
@@ -13,9 +11,8 @@ const persons = [
     { type: 'admin', name: 'Diana', role: 'moderator' },
     { type: 'user', name: 'Eve', age: 22 },
 ];
-// ============================================
 // 4. THE ACTUAL IMPLEMENTATION
-// ============================================
+// ============================
 // This is the real function body
 // "Person[]" is used here because this handles BOTH cases
 // "Record<string, unknown>" means an object with any string key and any value
@@ -35,9 +32,8 @@ function filterPersons(personType, criteria) {
         });
     });
 }
-// ============================================
 // 5. TESTING
-// ============================================
+// ==========
 // TypeScript KNOWS this returns User[]
 const users = filterPersons('user', { age: 25 });
 console.log(users);
